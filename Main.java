@@ -36,6 +36,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        if (args.length != 2) {
+            System.out.println("Enter two parameters: pathName and pathName of the automatedMaterials");
+            return;
+        }
         List<Material> materials = getMaterials("./materials.csv", ReadFile.getAutomatedMaterials("./automatedMaterials.csv"));
         System.out.println("\nResult:");
         for (int i = 0; i < materials.size(); i++) {
